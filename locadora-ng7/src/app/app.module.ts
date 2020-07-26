@@ -16,7 +16,7 @@ import { ContatoComponent } from './contato/contato.component';
     SobreComponent,
     HomeComponent,
     FilmesComponent,
-    ContatoComponent
+    ContatoComponent,
   ],
   imports: [
     BrowserModule,

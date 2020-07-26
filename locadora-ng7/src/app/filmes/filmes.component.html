@@ -1,6 +1,6 @@
-<p>Lista de filmes</p>
+<!-- <p>Lista de filmes</p> -->
 
-<table border="1">
+<!-- <table border="1">
     <thead>
         <tr>
             <th>Código</th>
@@ -34,6 +34,38 @@
             <td colspan="2"></td>
             <td>Total</td>
             <td>8</td>
+        </tr>
+    </tfoot>
+</table> -->
+
+<p>Existem {{ filmes.length }} títulos disponíveis para locação.</p>
+<p *ngIf="filmes.length <= 3">Temos poucos títulos no momento.</p>
+
+<br>
+
+<p style="font-weight: bolder;">Tabela de Filmes</p>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Gênero</th>
+            <th>Qtd</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let filme of filmes">
+            <td> {{ filme.codigo }} </td>
+            <td> {{ filme.nome }} </td>
+            <td> {{ filme.genero }} </td>
+            <td style="text-align: center;"> {{ filme.quantidade }} </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2"></td>
+            <td style="text-align: right;">Total</td>
+            <td style="text-align: center;">8</td>
         </tr>
     </tfoot>
 </table>
