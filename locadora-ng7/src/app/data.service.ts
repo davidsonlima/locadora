@@ -7,8 +7,12 @@ export class DataService {
 
   constructor() { }
 
-  verificaDisponibilidade(disponibilidade){
-    return console.log(disponibilidade ? "Está disponível" : "Não está disponível");
+  verificaDisponibilidadeService(disponibilidade){
+    return disponibilidade ? "Está disponível" : "Não está disponível";
   }
+
+  // messageBox(texto){
+  //   return alert(texto);
+  // }
 
 }

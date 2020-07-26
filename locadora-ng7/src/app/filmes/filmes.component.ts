@@ -16,8 +16,9 @@ export class FilmesComponent implements OnInit {
 
   constructor (private data: DataService) {}
 
-  verificaDisponibilidade(disponibilidade){
-    this.data.verificaDisponibilidade(disponibilidade);
+  isDisponivel(disponibilidade){
+    const msg = this.data.verificaDisponibilidadeService(disponibilidade);
+    alert(msg);
   }
 
   ngOnInit(): void {
