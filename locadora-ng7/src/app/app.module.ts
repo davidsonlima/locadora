@@ -4,17 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { AboutComponent } from './about/about.component';
+import { SobreComponent } from './sobre/sobre.component';
 import { HomeComponent } from './home/home.component';
 import { FilmesComponent } from './filmes/filmes.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    AboutComponent,
+    SobreComponent,
     HomeComponent,
-    FilmesComponent
+    FilmesComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
