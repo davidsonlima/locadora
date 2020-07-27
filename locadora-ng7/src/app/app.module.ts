@@ -8,6 +8,11 @@ import { SobreComponent } from './sobre/sobre.component';
 import { HomeComponent } from './home/home.component';
 import { FilmesComponent } from './filmes/filmes.component';
 import { ContatoComponent } from './contato/contato.component';
+import { HttpClientModule } from '@angular/common/http'
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -17,10 +22,13 @@ import { ContatoComponent } from './contato/contato.component';
     HomeComponent,
     FilmesComponent,
     ContatoComponent,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
